@@ -1,21 +1,21 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
-import Assignments from "./pages/Assignments";
-import Attendance from "./pages/Attendance";
-import Notes from "./pages/Notes";
-
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/assignments" element={<Assignments />} />
-        <Route path="/attendance" element={<Attendance />} />
-        <Route path="/notes" element={<Notes />} />
-      </Routes>
-    </BrowserRouter>
+    <div style={{ padding: "40px", fontFamily: "Arial" }}>
+      <h1>🎓 SmartScholar</h1>
+      <p>AI-Powered Academic Assistant</p>
+
+      <h2>Features</h2>
+      <ul>
+        <li>Assignment Tracking</li>
+        <li>Attendance Management</li>
+        <li>Notes Upload</li>
+        <li>AI Study Summaries</li>
+        <li>AI Quiz Generation</li>
+      </ul>
+
+      <h2>Project Status</h2>
+      <p>Currently under development for Buildthon.</p>
+    </div>
   );
 }
 
