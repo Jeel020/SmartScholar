@@ -148,7 +148,7 @@ function App() {
     justifyContent: "center",
     alignItems: "center",
     gap: "10px",
-    color: "#242a14",
+    color: "white", // Fixed: Changed from dark green/black to white for better contrast
     transition: "transform 0.2s",
   };
 
@@ -175,6 +175,16 @@ function App() {
     transition: "0.3s",
   };
 
+  // Input styles helper to ensure text is visible in both modes
+  const inputStyle = {
+    padding: "8px",
+    borderRadius: "5px",
+    border: "none",
+    marginRight: "10px",
+    background: darkMode ? "#2c2c2c" : "white",
+    color: darkMode ? "white" : "black",
+  };
+
   return (
     <>
       {/* Welcome Window */}
@@ -195,12 +205,12 @@ function App() {
         >
           <div
             style={{
-              background: "white",
+              background: darkMode ? "#1a1a1a" : "white", // Fixed: Respects dark mode
               padding: "40px",
               borderRadius: "20px",
               textAlign: "center",
               width: "500px",
-              boxShadow: "0 10px 30px rgba(255, 248, 248, 0.3)",
+              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
             }}
           >
             <h1
@@ -215,11 +225,11 @@ function App() {
               🎓 Welcome to SmartScholar
             </h1>
 
-            <p style={{ fontSize: "18px", color: "#764ba2" }}>
+            <p style={{ fontSize: "18px", color: darkMode ? "#a37ce6" : "#764ba2" }}>
               Your AI-Powered Academic Assistant
             </p>
 
-            <p style={{ color: "#333" }}>
+            <p style={{ color: darkMode ? "#cccccc" : "#333" }}>
               Manage assignments, track attendance, upload notes, generate AI summaries, and create quizzes — all in one place.
             </p>
 
@@ -252,6 +262,7 @@ function App() {
             : "linear-gradient(120deg, #494993, #14bcbc)",
           minHeight: "100vh",
           color: "white",
+          colorScheme: darkMode ? "dark" : "light", // Fixed: Adjusts default browser inputs/scrollbars automatically
         }}
       >
         <h1 style={{ marginBottom: "30px" }}>🎓 SmartScholar Dashboard</h1>
@@ -264,6 +275,8 @@ function App() {
             marginBottom: "20px",
             cursor: "pointer",
             border: "none",
+            background: darkMode ? "#333" : "white",
+            color: darkMode ? "white" : "black",
           }}
         >
           {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
@@ -364,24 +377,14 @@ function App() {
               type="date"
               value={dueDate}
               onChange={(e) => setDueDate(e.target.value)}
-              style={{
-                marginRight: "10px",
-                padding: "8px",
-                borderRadius: "5px",
-                border: "none"
-              }}
+              style={inputStyle} // Applied fixed dynamic style
             />
             <input
               type="text"
               placeholder="Enter assignment"
               value={assignment}
               onChange={(e) => setAssignment(e.target.value)}
-              style={{
-                padding: "8px",
-                borderRadius: "5px",
-                border: "none",
-                marginRight: "10px",
-              }}
+              style={inputStyle} // Applied fixed dynamic style
             />
 
             <button
