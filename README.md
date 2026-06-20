@@ -14,16 +14,6 @@ SmartScholar is an AI-powered academic assistant that helps students manage assi
 - 📊 Dashboard Statistics
 - 🌙 Dark Mode
 
-## Technologies Used
-
-- React.js
-- Vite
-- Express.js
-- Node.js
-- Google Gemini API
-- Local Storage
-- Vercel
-- Render
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
