@@ -1,5 +1,30 @@
 # SmartScholar
 
+# 🎓 SmartScholar
+
+SmartScholar is an AI-powered academic assistant that helps students manage assignments, track attendance, upload notes, generate AI-powered summaries, and create quizzes from study materials.
+
+## Features
+
+- 📚 Assignment Tracker
+- 📅 Attendance Tracker
+- 📝 Notes Upload
+- 🤖 AI Summary Generator
+- ❓ AI Quiz Generator
+- 📊 Dashboard Statistics
+- 🌙 Dark Mode
+
+## Technologies Used
+
+- React.js
+- Vite
+- Express.js
+- Node.js
+- Google Gemini API
+- Local Storage
+- Vercel
+- Render
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
